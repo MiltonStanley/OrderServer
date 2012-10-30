@@ -7,7 +7,8 @@
 
 <p>
   <b>For order:</b>
-  <%= @paper_order.for_order %>
+      <%= "Yes" if @paper_order.for_order %>
+      <%= "No" unless @paper_order.for_order %>
 </p>
 
 
