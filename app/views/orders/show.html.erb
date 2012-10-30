@@ -1,135 +1,135 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Employee:</b>
-  <%= @order.employee %>
-</p>
-
-<p>
+<h2>Contact Information</h2>
   <b>Business:</b>
   <%= @order.business %>
-</p>
 
-<p>
   <b>Contact:</b>
   <%= @order.contact %>
-</p>
-
-<p>
+  <br><br>
   <b>Phone:</b>
   <%= @order.phone %>
-</p>
-
-<p>
+  <br><br>
   <b>Date:</b>
   <%= @order.date %>
-</p>
 
-<p>
-  <b>Date promised:</b>
+  <b>Date Promised:</b>
   <%= @order.date_promised %>
-</p>
+  <br><br>
 
-<p>
+<h2>Order Information</h2>
+
   <b>Quantity:</b>
   <%= @order.quantity %>
-</p>
 
-<p>
   <b>Item:</b>
   <%= @order.item %>
-</p>
+  <br><br>
 
-<p>
-  <b>Paper weight:</b>
-  <%= @order.paper_weight %>
-</p>
-
-<p>
-  <b>Paper color:</b>
-  <%= @order.paper_color %>
-</p>
-
-<p>
   <b>Flat size:</b>
   <%= @order.flat_size %>
-</p>
 
-<p>
+  <b>Paper weight:</b>
+  <%= @order.paper_weight %>
+
+  <b>Paper color:</b>
+  <%= @order.paper_color %>
+
   <b>Inkspec:</b>
   <%= @order.inkspec %>
-</p>
+  <br><br>
 
-<p>
+<h2>Finishing</h2>
+
+  <% unless @order.stapling == "" or @order.stapling.downcase == "no" %>
   <b>Stapling:</b>
   <%= @order.stapling %>
-</p>
+  <br>
+  <% end %>
 
-<p>
+  <% unless @order.binding == "" or @order.binding.downcase == "no" %>
   <b>Binding:</b>
   <%= @order.binding %>
-</p>
+  <br>
+  <% end %>
 
-<p>
+  <% unless @order.folding == "" or @order.folding.downcase == "no" %>
   <b>Folding:</b>
   <%= @order.folding %>
-</p>
+  <br>
+  <% end %>
 
-<p>
+  <% unless @order.drilling == "" or @order.drilling.downcase == "no" %>
   <b>Drilling:</b>
   <%= @order.drilling %>
-</p>
+  <br>
+  <% end %>
 
-<p>
+  <% unless @order.cutting == "" or @order.cutting.downcase == "no" %>
   <b>Cutting:</b>
   <%= @order.cutting %>
-</p>
+  <br>
+  <% end %>
 
-<p>
+  <% unless @order.padding == "" or @order.padding.downcase == "no" %>
   <b>Padding:</b>
   <%= @order.padding %>
-</p>
+  <br>
+  <% end %>
 
-<p>
+  <% unless @order.numbering == "" or @order.numbering.downcase == "no" %>
   <b>Numbering:</b>
   <%= @order.numbering %>
-</p>
+  <br>
+  <% end %>
 
-<p>
+  <% unless @order.laminating == "" or @order.laminating.downcase == "no" %>
   <b>Laminating:</b>
   <%= @order.laminating %>
-</p>
+  <br>
+  <% end %>
 
-<p>
-  <b>Miscellaneous:</b>
-  <%= @order.miscellaneous %>
-</p>
-
-<p>
-  <b>Base design:</b>
-  <%= @order.base_design %>
-</p>
-
-<p>
-  <b>Additional design:</b>
-  <%= @order.additional_design %>
-</p>
-
-<p>
+  <% unless @order.coating == "" or @order.coating.downcase == "no" %>
   <b>Coating:</b>
   <%= @order.coating %>
-</p>
+  <br>
+  <% end %>
 
-<p>
+  <% unless @order.miscellaneous == "" or @order.miscellaneous.downcase == "no" %>
+  <b>Other:</b>
+  <%= @order.miscellaneous %>
+  <br>
+  <% end %>
+  <br><br>
+
+<h2>Other</h2>
+
+  <% unless @order.base_design == "" or @order.base_design.downcase == "no" %>
+  <b>Base Design:</b>
+  <%= @order.base_design %>
+  <br>
+  <% end %>
+
+  <% unless @order.additional_design == "" or @order.additional_design.downcase == "no" %>
+  <b>Additional Design:</b>
+  <%= @order.additional_design %>
+  <br>
+  <% end %>
+
   <b>Price:</b>
   <%= @order.price %>
-</p>
-
-<p>
+  <br>
   <b>Location:</b>
   <%= @order.location %>
-</p>
+  <br>
+  <% if @order.quantity == "150" %>
+    Hello
+  <% end %>
+<br>
+<input type="button" 
+  onClick="window.print()" 
+  value="Print This Order"/>
+  <br><br>
+<%= link_to 'Edit Order', edit_order_path(@order) %> |
+<%= link_to 'Back to Orders', orders_path %>
 
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>

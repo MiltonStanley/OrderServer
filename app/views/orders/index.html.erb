@@ -1,16 +1,17 @@
-<h1>Listing orders</h1>
+<h1>Currrent orders</h1>
+<br>
 
 <table>
   <tr>
-    <th>Employee</th>
+<!--    <th>Employee</th> -->
     <th>Business</th>
     <th>Contact</th>
-    <th>Phone</th>
-    <th>Date</th>
+<!--    <th>Phone</th>
+    <th>Date</th> -->
     <th>Date promised</th>
-    <th>Quantity</th>
+<!--    <th>Quantity</th> -->
     <th>Item</th>
-    <th>Paper weight</th>
+<!--    <th>Paper weight</th>
     <th>Paper color</th>
     <th>Flat size</th>
     <th>Inkspec</th>
@@ -26,7 +27,7 @@
     <th>Base design</th>
     <th>Additional design</th>
     <th>Coating</th>
-    <th>Price</th>
+    <th>Price</th> -->
     <th>Location</th>
     <th></th>
     <th></th>
@@ -35,15 +36,15 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%= order.employee %></td>
+<!--    <td><%= order.employee %></td> -->
     <td><%= order.business %></td>
     <td><%= order.contact %></td>
-    <td><%= order.phone %></td>
-    <td><%= order.date %></td>
+<!--    <td><%= order.phone %></td>
+    <td><%= order.date %></td> -->
     <td><%= order.date_promised %></td>
-    <td><%= order.quantity %></td>
-    <td><%= order.item %></td>
-    <td><%= order.paper_weight %></td>
+<!--    <td><%= order.quantity %></td> -->
+    <td><%= order.quantity + " " + order.item %></td>
+<!--    <td><%= order.paper_weight %></td>
     <td><%= order.paper_color %></td>
     <td><%= order.flat_size %></td>
     <td><%= order.inkspec %></td>
@@ -59,7 +60,7 @@
     <td><%= order.base_design %></td>
     <td><%= order.additional_design %></td>
     <td><%= order.coating %></td>
-    <td><%= order.price %></td>
+    <td><%= order.price %></td> -->
     <td><%= order.location %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
