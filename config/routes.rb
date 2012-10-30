@@ -1,4 +1,6 @@
 OrderServer::Application.routes.draw do
+  resources :paper_orders
+
   resources :orders
 
   get "home/index"

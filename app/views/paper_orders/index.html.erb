@@ -1,0 +1,25 @@
+<h1>Listing paper_orders</h1>
+
+<table>
+  <tr>
+    <th>Order</th>
+    <th>For order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @paper_orders.each do |paper_order| %>
+  <tr>
+    <td><%= paper_order.order %></td>
+    <td><%= paper_order.for_order %></td>
+    <td><%= link_to 'Show', paper_order %></td>
+    <td><%= link_to 'Edit', edit_paper_order_path(paper_order) %></td>
+    <td><%= link_to 'Destroy', paper_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Paper order', new_paper_order_path %>
