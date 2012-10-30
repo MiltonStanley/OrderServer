@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  employee: MyString
+  business: MyString
+  contact: MyString
+  phone: MyString
+  date: MyString
+  date_promised: MyString
+  quantity: MyString
+  item: MyString
+  paper_weight: MyString
+  paper_color: MyString
+  flat_size: MyString
+  inkspec: MyString
+  stapling: MyString
+  binding: MyString
+  folding: MyString
+  drilling: MyString
+  cutting: MyString
+  padding: MyString
+  numbering: MyString
+  laminating: MyString
+  miscellaneous: MyString
+  base_design: MyString
+  additional_design: MyString
+  coating: MyString
+  price: MyString
+  location: MyString
+
+two:
+  employee: MyString
+  business: MyString
+  contact: MyString
+  phone: MyString
+  date: MyString
+  date_promised: MyString
+  quantity: MyString
+  item: MyString
+  paper_weight: MyString
+  paper_color: MyString
+  flat_size: MyString
+  inkspec: MyString
+  stapling: MyString
+  binding: MyString
+  folding: MyString
+  drilling: MyString
+  cutting: MyString
+  padding: MyString
+  numbering: MyString
+  laminating: MyString
+  miscellaneous: MyString
+  base_design: MyString
+  additional_design: MyString
+  coating: MyString
+  price: MyString
+  location: MyString

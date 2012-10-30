@@ -1,0 +1,82 @@
+rails new [name] # 3.2 - creates server
+
+rake db:create	 #3.4 - creates database
+
+rails server	 #4.1 - starts server
+
+rake db:migrate				#6.1 - runs migration, updating db from db/migration/[files]
+
+
+rails generate controller home index	#4.2 - customized webpage & views 		- what index method does in home
+			# create	app/controllers/home_controller.rb
+			# create	app/views/home
+			# create	app/views/home/index.html.erb
+			# create	test/functional/home_controller_test.rb
+			# create	app/helpers/home_helper.rb
+			# create	test/unit/helpers/home_helper_test.rb
+			# create	app/assets/javascripts/home.js.coffee
+			# create	app/assets/stylesheets/home.css.scss
+	
+					# 1) New home page is in app/views/home/index.html.erb
+					# 2) Must remove /public/index.html
+					# 3) Then config/routes.rb - root :to => "home#index"
+					# 6.2 - adding a link for erb to parse
+
+rails generate scaffold [Model_name] [params as - name:type] #6
+			# THIS WILL CREATE ENTIRE MODEL FROM SCRATCH, with ALL VIEWS
+
+			## CREATES:
+			# db/migrate/20100207214725_create_posts.rb
+			# app/models/post.rb
+			# test/unit/post_test.rb
+			# test/fixtures/posts.yml
+			# config/routes.rb
+			# app/controllers/posts_controller.rb
+			# app/views/posts/index.html.erb
+			# app/views/posts/edit.html.erb
+			# app/views/posts/show.html.erb
+			# app/views/posts/new.html.erb
+			# app/views/posts/_form.html.erb
+			# test/functional/posts_controller_test.rb
+			# app/helpers/posts_helper.rb
+			# test/unit/helpers/posts_helper_test.rb
+			# app/assets/javascripts/posts.js.coffee
+			# app/assets/stylesheets/posts.css.scss
+			# app/assets/stylesheets/scaffolds.css.scss
+
+			#6.5 - validation of required fields, rest of 6 various useful things
+			# Details at http://guides.rubyonrails.org/active_record_validations_callbacks.html
+			#In model, add:
+	validates [property], [HELPERS, ie. ':presence => true']
+
+
+		##### Generating ANOTHER Model (7.1)
+
+rails generate model Name [params- property:type]
+			# This only makes the model, not the views etc., - good for tying one model into another (comments to post example)
+			## CREATES 
+			# db/migrate/[timestamp]_create_[names].rb
+			# app/models/[name].rb
+			# various test_units
+			# Will have to manually do views
+			#
+			# Then run the following to set up database:
+
+		##### Tying one model to another:
+		# same as making another one; but add [superior]:references in model.rb
+		# Then add "has_many :[new_model]s to superior.rb model
+		# THEN config/routes.rb - add a do-end block to superior, w/ resources :inferior
+		# THEN rails generate controller Model
+
+
+			##### ADDING TO A MODEL (http://stackoverflow.com/questions/10352832/adding-a-new-field-to-rails-model)
+
+rails generate migration Add[Field]To[Model] [field]:[class]
+		# 	cf rails generate migration AddPositionToEmployee position:string
+			# Will still have to manually edit views, found in app/views/[name]s
+			# index.html.erb
+			# show.html.erb
+			# _form.html.erb
+		# And finally the actual model, in app/models/[name].rb
+
+root_path is the homepage

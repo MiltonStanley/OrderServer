@@ -1,0 +1,121 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employee %><br />
+    <%= f.text_field :employee %>
+  </div>
+  <div class="field">
+    <%= f.label :business %><br />
+    <%= f.text_field :business %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :date_promised %><br />
+    <%= f.text_field :date_promised %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </div>
+  <div class="field">
+    <%= f.label :paper_weight %><br />
+    <%= f.text_field :paper_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :paper_color %><br />
+    <%= f.text_field :paper_color %>
+  </div>
+  <div class="field">
+    <%= f.label :flat_size %><br />
+    <%= f.text_field :flat_size %>
+  </div>
+  <div class="field">
+    <%= f.label :inkspec %><br />
+    <%= f.text_field :inkspec %>
+  </div>
+  <div class="field">
+    <%= f.label :stapling %><br />
+    <%= f.text_field :stapling %>
+  </div>
+  <div class="field">
+    <%= f.label :binding %><br />
+    <%= f.text_field :binding %>
+  </div>
+  <div class="field">
+    <%= f.label :folding %><br />
+    <%= f.text_field :folding %>
+  </div>
+  <div class="field">
+    <%= f.label :drilling %><br />
+    <%= f.text_field :drilling %>
+  </div>
+  <div class="field">
+    <%= f.label :cutting %><br />
+    <%= f.text_field :cutting %>
+  </div>
+  <div class="field">
+    <%= f.label :padding %><br />
+    <%= f.text_field :padding %>
+  </div>
+  <div class="field">
+    <%= f.label :numbering %><br />
+    <%= f.text_field :numbering %>
+  </div>
+  <div class="field">
+    <%= f.label :laminating %><br />
+    <%= f.text_field :laminating %>
+  </div>
+  <div class="field">
+    <%= f.label :miscellaneous %><br />
+    <%= f.text_field :miscellaneous %>
+  </div>
+  <div class="field">
+    <%= f.label :base_design %><br />
+    <%= f.text_field :base_design %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_design %><br />
+    <%= f.text_field :additional_design %>
+  </div>
+  <div class="field">
+    <%= f.label :coating %><br />
+    <%= f.text_field :coating %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
