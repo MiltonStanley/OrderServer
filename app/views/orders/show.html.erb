@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
+  <b>Location:</b>
+  <%= @order.location %>
+  <br>  
 
 <h2>Contact Information</h2>
   <b>Business:</b>
@@ -120,16 +123,20 @@
   <br>
   <% end %>
   <br>
-  <b>TOTAL PRICE::</b>
+
+  <b>TOTAL PRICE:</b>
   <%= @order.price %>
-  <br>
-  <b>Location:</b>
-  <%= @order.location %>
-  <br>
-  <% if @order.quantity == "150" %>
-    Hello
+
+  <% 4.times do |time| %>
+    <br>
   <% end %>
-<br>
+  
+  To Be Billed:______________________________________________
+
+  <% 3.times do |time| %>
+    <br>
+  <% end %>
+
 <input type="button" 
   onClick="window.print()" 
   value="Print This Order"/>
