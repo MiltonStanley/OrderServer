@@ -104,6 +104,10 @@
 
 <h2>Other</h2>
 
+  <b>Print Cost:</b>
+  <%= @order.print_cost %>
+  <br>
+
   <% unless @order.base_design == "" or @order.base_design.downcase == "no" %>
   <b>Base Design:</b>
   <%= @order.base_design %>
@@ -115,8 +119,8 @@
   <%= @order.additional_design %>
   <br>
   <% end %>
-
-  <b>Price:</b>
+  <br>
+  <b>TOTAL PRICE::</b>
   <%= @order.price %>
   <br>
   <b>Location:</b>
